@@ -1,7 +1,2 @@
-int("hello,pity")
-
-hahaha
-1
-2
-3
-gigigigig
+var a = "hello"
+a = a + "11111"
