@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 var a = "hello"
 a = a + "111111"
+=======
+fff
+>>>>>>> 9a055fdf8c3ffa05d127390ab1a19b3a462b29ee
