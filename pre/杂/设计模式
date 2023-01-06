@@ -1,0 +1,92 @@
+饿汉式：类加载时就进行初始化
+public class Singleton{
+    private static Singleton singleton = new Singleton();
+    private Singleton(){}
+    public static Singleton getSingleton(){
+        return singleton;
+    }
+}
+ 
+懒汉式(线程不安全)：
+public class Singleton{
+    private static Singleton singleton = null;
+    private Singleton(){}
+    public static /*synchronized*/ Singleton getSingleton(){
+        if(singleton == null){
+            singleton = new Singleton();
+        }
+        return singleton;
+    }
+}
+双重校验单例模式(DCL)：
+public class Singleton{
+    private volatile static Singleton singleton;
+    private Singleton(){}
+    public static Singleton getSingleton(){
+        if(singleton == null){
+            //类对象加锁
+            synchronized (Singleton.class) {
+                if(singleton == null){
+                    singleton = new Singleton();
+                }
+            }
+        }
+        return singleton;
+    }
+}
+
+
+// 简单工厂模式
+//定义一个工厂类，他可以根据参数的不同返回不同类的实例，被创建的实例通常都具有共同的父类
+//在简单工厂模式中用于被创建实例的方法通常为静态(static)方法,因此简单工厂模式又被成为静态工厂方法(Static Factory Method)
+//需要什么，只需要传入一个正确的参数，就可以获取所需要的对象，而无需知道其实现过
+abstract class Product
+{
+    public void MethName()
+    {
+        //公共方法的实现
+    }
+    public abstract void MethodDiff();
+    //声明抽象业务方法
+}
+class ConcreteProductA : Product
+{
+    public override void MethodDiff()
+    {
+        //业务方法的实现
+    }
+}
+
+class Factory
+{
+    public static Product GetProduct(string arg)
+    {
+        Product product =  null;
+        if(arg.Equals("A")
+        {
+            product = new ConcreteProductA();
+            //init
+        }
+        else if(arg.Equals("B"))
+        {
+            product = new ConcreteProductB();
+            //init
+        }
+        else
+        {
+        ....//其他情况
+        }
+        return product;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Product product;
+        product = Factory.GetProduct("A");//工厂类创建对象
+        Product.MethName();
+        product.MethodDiff();
+    }
+}

@@ -1,0 +1,216 @@
+UC1 Create and Disable Patients Use Case
+UC2 Create, Disable, and Edit Personnel Use Case
+UC3 Authenticate Users Use Case
+UC4 Enter/edit Demographics Use Case
+UC5 Log Transaction Use Case
+UC6 View HCP; Designate/Undesignate Designated Licensed Health Care Professional Use Case
+UC8 View Access Log Use Case
+UC9 View records Use Case
+UC10 Enter/edit personal health records Use Case
+UC11 Document office visit Use Case
+UC12 Determine operational profile Use Case
+UC13 Declare/undeclare Personal Representative Use Case
+UC15 Maintain standards lists Use Case
+UC16 Identify risk of chronic disease Use Case
+UC17 Proactively Determine Needed Patient Care Use Case
+UC18 Maintain a hospital listing Use Case
+UC19 View prescription report Use Case
+UC21 View emergency electronic health record Use Case
+UC22 Flow of Events for the Schedule Appointments Use Case
+UC23 View Comprehensive Patient Report Use Case
+UC24 Take Satisfaction Survey Use Case
+UC25 View Physician Satisfaction Survey Results Use Case
+UC26 View/Edit Laboratory Procedure Status Use Case
+UC27 Alert Users by Email Use Case
+UC28 View Patients
+UC29 Find LHCPs with experience with a diagnosis
+UC30 Messaging between LHCP and patient
+UC31 Find LHCPs for prescription renewal Use Case
+UC34 Report Telemedicine Monitoring Details Use Case
+UC33 Refer and Provide Consultations Use Case
+UC35 Report Adverse Event Use Case
+UC36 Monitor Adverse Event Use Case
+UC37 Safe Drug Prescription Use Case
+UC38 Maintain Drug Interaction Use Case
+UC40 View Schedule Calendar Use Case
+UC42 View Notifications Use Case
+UC43 View Activity Feed Use Case
+Patient MID should be the number.
+The hospital ID numbers for a LHCP are stored in the Medical Care Personnel Affiliation database.
+The list is sorted by the date of the last office visit (most recent first).
+A session that has been inactive for too long is terminated.
+An authenticated session ends when the user logs out or closes the iTrust application.
+Electronic sessions must terminate after a "pre-determined" period of inactivity. 
+All authorization is disabled after a period of inactivity that exceeds this length.
+Initially only the name and email are provided. 
+The hospital ID numbers for a LHCP are stored in the Medical Care Personnel Affiliation database (data format 5.11). 
+The resulting list should include Name of accessor, Role of accessor relative to the patient, Date and time of access and Transaction Type (See Section 6.3).
+The instructions can contain numbers, characters, symbols, blankspace and carriage return.
+The data in the database is analyzed.
+Currently available risk factors for chronic diseases are defined for Diabetes and Type 1 and Type2 and Heart Disease. 
+The list is sorted based on the alphabetical order of the patients' last names, and then first names.
+The LHCP's name, specialty, and address are provided. 
+The data for personnel can be edited according to Data Format. 
+The data for personnel can be edited according to Data Format 6.2. 
+Any event which creates, views, edits or deletes information is logged.
+Loggin failures, valid authentication and log outs are also logged. 
+These audit codes are summarized in the Audit & Transaction Codetable.
+The LHCP's name, specialty, address, date of office visit, and whether or not the LHCP is a DLHCP for this patient is indicated. 
+The HCP's medical identification number should also be maintained. 
+The message displays the risk factors that the patients exhibit.
+The prescription report is titled with the patient name. 
+The prescription list includes medication, date prescribed, start date, end date for each prescription, and the name of the doctor who prescribed the medication.
+A new entry shall not have the same type name as that of any existing entry. 
+Each row in the list includes the appointment type, appointment date and time, duration, and the name of either the patient or the LHCP. 
+The appointments in the list shall be ordered by appointment date and time, the soonest upcoming first. 
+When an LHCP views a list of his upcoming appointments, system presents an option to edit or remove the appointment. 
+The answers to the survey are stored.
+Only laboratory procedures for which the HCP has allowed viewing access are shown. 
+System presents an approvel screen. 
+System presents a success or failure message to the editor.
+System presents a line chart giving the chosen measurements of the patient spanning the last 3 calendar years of data, averaged by quarters.
+System presents an automatically-calculated value of BMI calculated based on the formula. 
+System presents the actual operational profile of the operations of the iTrust.
+System presents a listing of patients for whom they are a DLHCP who need care because of satisfying the one of preceding conditions. 
+System presents patient's name and patient¡¯s home phone number. 
+The list is sorted by the dates of the last status update.
+An email notification is sent. 
+An email alert is sent out to the iTrust user in the event of a changed password, status change in laboratory procedure, comprehensive report requested and generated. 
+System presents the patient¡¯s name, patient¡¯s address, and patient¡¯s date of last office visit. 
+A patient finds the LHCPs who have handled that condition. 
+System presents a listing of all their own diagnoses, sorted by diagnosis date (more recent first). 
+System presents the LHCPs in the patient's living area (based upon the first three numbers of their zip code) who have handled this diagnosis in the last three years. 
+The list is ranked by the quantity of patients the LHCP has treated for that diagnosis (each patient is only counted once regardless of the number of office visits). 
+A message is sent to the patient and their personal representative.
+A message is sent to the patient and their personal representative.
+A prescription list is sorted by start date.
+A prescription list is then displayed.
+The information is viewed.
+The information is edited.
+Demographic information is entered.
+Demographic information is edited.
+System presents a menu of DLHCP. 
+A row for showing the message subject, the name of the recipient, and the timestamp (which includes both date and time) is then visible in the patient/representative¡¯s message outbox. 
+A bolded row for showing the message subject, the name of sender, and the timestamp is then visible in the LHCP's message inbox. 
+A fake email is sent to the LHCP alerting the user that a new message has arrived. 
+A row for showing the message subject, the name of the recipient, and the timestamp is then visible in the LHCP¡¯s message outbox. 
+A bolded row for showing the message subject, the name of the sender, and the timestamp is then visible in the patient/representative¡¯s message inbox, and a fake email is sent to the patient/representative that indicates that he/she has a new message from an LHCP. 
+After a message is sent, the LHCP is directed to his message outbox.  
+After a message is sent, the patient or personal representative is directed to his message outbox. 
+A row for showing the message subject (now preceded by ¡°RE:¡±), the name of the recipient, and the timestamp is then visible in the patient/representative¡¯s message outbox. 
+A bolded row for showing the message subject (now preceded by ¡°RE:¡±), the name of the sender, and timestamp is then visible in the LHCP¡¯s message inbox. 
+A fake email is sent to the LHCP alerting the LHCP that a new message reply has arrived.
+A row for showing the message subject (now preceded by ¡°RE:¡±), the name of the recipient, and the timestamp are then visible in the LHCP¡¯s message outbox. 
+A bolded row for showing the message subject (now preceded by ¡°RE:¡±), the name of sender, and timestamp are then visible in the patient¡¯s message inbox. 
+A fake email is sent to the patient alerting the patient that a new message reply has arrived.
+Each row in the message inbox or outbox includes the message subject, the name of either the sender (only for the case of inbox) or recipient (only for the case of outbox), and timestamp. 
+By default, the messages in the message inbox should be ordered by timestamp, the most recent first. 
+After a message in the message inbox is read (i.e., displayed in a new page), the row for the message in the message inbox is not bolded anymore.
+Sorted order is not saved for later viewing, after the message inbox or outbox is reopened again (where the default sorting is always used).
+A single filter includes values for these five filtering criteria (rather than five filters for these five filtering criteria) and a value could be an empty string, indicating that this criterion has no impact on filtering (i.e., imposing no constraints related to this criterion). 
+The user interface shall be initially populated with the values of the filtering criteria from the previously saved filter. 
+The user's associated filter initially has all empty inputs for the filtering criteria before the user modifies it.
+System presents a list of the patient's expired prescriptions, sorted by start date (the later date is ranked earlier closer to the top). 
+System presents a menu of his patients and a menu of other LHCPs. 
+System presents a text box to HCP.
+When the patient and LHCP are chosen, system presents the MID of the patient that will be sent to the receiving HCP. 
+System presents a list of pending referrals. 
+System presents the MID of the sending LHCP, the patient MID, and the referral details. 
+System presents an option (¡°finish¡±, ¡°decline¡±, ¡°pending¡± with ¡°pending¡± as default value) to mark the status of the consultation and a text box to enter the details of the consultation.  
+A patient may have up to 10 physiologic data points in any one day, reported by him/herself, a UAP, or a personal representative. 
+A patient may have at most one height data point, one weight data point, and one pedometer data point in any one day, reported by him/herself, a UAP, or a personal representative.
+In both cases, system presents the name of the patient.
+By default, all types of information are selected for monitoring.
+The input data, a timestamp and the fact are saved. 
+System presents a listing of all his patients. 
+Patients with no information for the current day are highlighted. 
+Patients with blood pressure or glucose level out of range are highlighted (normal blood pressure: systolic 90-140; diastolic 60-90; normal glucose 70-150). 
+System presents a screen upon which he can choose a date range. 
+System presents a list of the patients. 
+The input data, a timestamp, and the fact and their MID are saved. 
+System displays only the applicable input entries to the UAP. 
+System presents a list of the patients. 
+The input data and a timestamp and the fact and their MID are saved. 
+System displays only the applicable input entries to the patient.
+The input data, a timestamp and the fact are saved. 
+System displays only the applicable input entries to the patient. 
+System presents  a listing of all his patients. 
+Patients with no information for the current day are highlighted in red. 
+Patients with a weight value 5% more or less than the immediate previously recorded weight value are highlighted.
+System presents a list of the patients whose height, weight, or pedometer data type is specified to be under monitoring and for which he/she is allowed to report measurements. 
+The input data, a timestamp and the fact  and his MID are saved. 
+System displays only the applicable input entries to the UAP.
+System presents a list of the patients for which he is allowed to report measurements. 
+The input data, a timestamp, and the fact and his MID are saved. 
+System displays only the applicable input entries to the patient. 
+System presents a listing of all prescription drugs for which he has been prescribed and has taken in the last 12 months. 
+A fake email is sent to the LHCP who prescribed the medication indicating the patient name and MID, drug, and symptoms.
+System presents a listing of all immunizations for which he has been administered in the last 12 months. 
+A fake email is sent to the LHCP who administered the immunization indicating the patient name and MID, drug, and symptoms.
+System presents a listing of prescription drug-related adverse events for the time period that do not have a status of ¡°removed¡±, sorted by NDC. 
+System presents a listing of immunization-related adverse events for the time period that do not have a status of ¡°removed¡±, sorted by CPT code . 
+The adverse event report changes to a status of ¡°removed.¡± 
+A message of the removal is sent to the adverse event reporter and to the LHCP. 
+The drug is checked against the patient's drug allergies. 
+The drug is checked for interactions between other drugs currently taken by the patient. 
+The patient is sent a ¡°fake email¡±.
+The system shall store reason id number for the reason and the name of the reason.
+The two drugs and a textual description of the possible effects of the interaction are stored.
+System presents a listing of all drug interactions with that drug. 
+System presents two lists of NDC codes/names. 
+System displays his appointments in the current month. 
+System displays his appointments on the calendar. 
+In the calendar, the date entry with an office visit shall display a label as the diagnoses for the office visit.
+In the calendar, the date entry with a prescription date (i.e., the date of the office visit the medication was prescribed on) shall display a label for the medications prescribed (i.e., NDC, see Data Format 5.6) in the prescription. 
+In the calendar, the date entry with a laboratory procedure (i.e., the entry of the its last status update date) shall display a label as the LOINC code for the laboratory procedure. 
+In the calendar, the date entry with an appointment shall display a label as the appointment type name for the appointment. 
+The date entry including conflicting appointments is highlighted in bold (a conflicting appointment is one that has overlap in its appointment duration period with that of at least another appointment of the same user). 
+System displays the details for the appointment in a new page, including the appointment type, the appointment date and start time, comment, and the name of either the patient (only for the user being an LHCP) or the LHCP (only for the user being a patient).
+System displays the details for the visit in a new page, including date of office visit, note text, diagnoses (i.e., ICD-9CM codes), medical procedures performed (i.e., CPT code) , lab procedures ordered (LOINC code, see Data Format 6.11), medications prescribed (i.e., NDC, see Data Format 5.6), immunizations given (i.e., CPT Code, see UC15, S1), and the name of the doctor who prescribed the medication. 
+System displays the details for the prescription in a new page, including the medications prescribed.
+System displays the details for the laboratory procedure in a new page. 
+The event is logged.
+The notification center displays the message (You haven't entered remote monitoring information for today yet!).
+The notification center also displays a list of the patient and patient representee upcoming appointments, the information of his designated HCP, and the number of unread messages from his message inbox.
+The appointment details display the appointment type, appointment date and the start time, duration, the name of the patient, and appointment comments.
+The appointments are listed in the format ¡°MM/DD/YYYY - AppointmentType¡±. 
+The appointment details include the appointment type, appointment date and start time, duration, the name of the LHCP, and appointment comments.
+System presents a listing of all his patients to view physiologic data reported during the current date. 
+Each row in the list includes their blood pressure and glucose levels, recording timestamp, and whom reported the data (patient, UAP name, personal representative name).
+System presents a listing of all his patients to view weight/pedometer data reported during the current date. 
+Each row in the list includes their weight and pedometer reading numbers levels, recording timestamp, and whom reported the data (patient, UAP name, personal representative name).
+System presents a list of his messages in the message inbox.  
+Each row in the list includes the message subject, the name of the sender, and timestamp. 
+By default, the messages in the list should be ordered by timestamp, the most recent first. 
+An activity feed is displayed.
+Only the most recent 20 activities are listed in the user page after login.
+A link of "Older Activities" shall be displayed. 
+The system shall append 20 more activities to the end of the currently listed activities on the same page. 
+Similarly a link of ¡°Older Activities¡± shall be further displayed and so on.
+Special add-on or plug-in software required to apply to an HTTP client to prevent indiscriminant copying by users.
+However, it should not perform these operations when it is loading medicines to the medicine dispenser. 
+All data is assigned security level that reflects its relative sensitivity, confidentiality, and protection value. 
+Loading medicines to medicine dispenser, creating medicine order and picking medicines from the medicine dispenser are operations forming a critical task.
+In our case study this means that the residents themselves must also be regarded as principals for whom we define access rights. 
+The principals involved in an information system are usually thought of as staff members of a certain organisation. 
+So, for example, the manager should be made aware of repeated attempts by a health care worker to access information beyond their rights.  
+Clearly, the manager does not wish to be informed about every access but some logging is still necessary. 
+In an electronic system this overview must be supplied by some form of logging of accesses and access attempts. 
+For a special purpose, access to an older medical record can be sought and obtained from the manager. 
+This period is seven years for someone who is not of Aboriginal or Torres Strait Islander descent and nine years for someone who is. 
+The care plan is updated in consultation with the resident or the responsible person.  
+In the current paper-based system, this is prevented by requiring that any new entry be signed by the doctor making that entry. 
+This does not mean, however, that she has unrestricted access. 
+This is one type of Dynamic Separation of Duty (DSOD) policy. 
+For example, according to Figure 2, supervisor role inherits purchasing officer¡¯s permissions and purchasing officer inherits clerk¡¯s permissions. 
+In addition, the role hierarchy implicitly authorizes a specialized role to inherit permissions.
+Access is authorized or restricted to objects based on the security characteristics of the HTTP client.
+Access is authorized or restricted to objects based on the time of day depending on the labeling on the resource and the user's credentials. 
+Access to information is determined based on authorizations to access control lists based on user identifier and group membership. 
+It is used to enforce authorisation rules on bonus allocation among the employees of a company.
+There do not exist members of STUDENT who can ASSIGN EXTERNALGRADES. 
+There exists no combination of roles such that a user with those roles can both RECEIVE and ASSIGN the resource EXTERNALGRADES.
+The need to make this arrangement is only to allow the manager and resident to set a time that is convenient to both of them. 
+This is permitted with the consent of the resident or the responsible person and the notification of the manager.
+Occasionally, due to pressing circumstances, it may be necessary for a visiting doctor to examine a resident who is not normally his/her patient.
+Their main form of access is to view the care plan for each resident and to add progress note entries based on their observations.
